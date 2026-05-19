@@ -1,9 +1,9 @@
 # Python AI Dev — Applied AI Engineer
-## Complete 24-Week Syllabus (Tech Stack)
+## Complete 24-Week Syllabus (v2 — System Design Heavy)
 
-> **What this document is:** The full technical curriculum for the Applied AI Engineer program. Day-wise breakdown of all tech content across 24 weeks, split into two phases of 12 weeks each.
+> **What changed in v2:** LLD and HLD heavily expanded for placement interviews (now 35 total system design sessions across both phases). Capstone tightened to 2 weeks. Filler topics (OAuth flows, Alembic, MCP, HyDE, etc.) removed to make room for interview-critical content.
 >
-> **What it isn't:** DSA / interview prep is handled separately and not included here.
+> **Why:** For B.Tech 3rd-year students, system design is the difference between a ₹6 LPA service company offer and a ₹15–25 LPA product company offer. Same DSA, same projects, different system design depth.
 
 ---
 
@@ -11,43 +11,68 @@
 
 | Phase | Weeks | Focus | Daily Pattern |
 |---|---|---|---|
-| **Phase 1** | 1–12 | Foundations + Full-Stack Engineering | 4 tech days/week |
-| **Phase 2** | 13–24 | AI Engineering + Capstone | 4 tech days + 1 project day/week |
+| **Phase 1** | 1–12 | Foundations + Engineering + LLD/HLD | 4 tech days/week |
+| **Phase 2** | 13–24 | AI Engineering + Advanced System Design + Capstone | 4 tech days + 1 project day/week |
 
 **Every session = 90 min Learn + 90 min Practice (3 hours total)**
 
 ---
 
-## Module Map
+## What's Inside (Headline Numbers)
 
-### Phase 1 — Foundations + Engineering (Weeks 1–12)
-
-| Weeks | Module |
+| Metric | Count |
 |---|---|
-| 1–2 | Python OOP + Async |
-| 3 | SQL + Networking |
-| 4 | Mini Project — Async API Client |
-| 5–6 | FastAPI |
-| 7 | React + Tailwind |
-| 8 | Full-Stack Project (Deployed) |
-| 9 | LLD (Low Level Design) |
-| 10 | HLD (High Level Design) |
-| 11 | ML Conceptual (Light) |
-| 12 | Prompt Engineering + AI Mini Project |
-
-### Phase 2 — AI Engineering + Capstone (Weeks 13–24)
-
-| Weeks | Module |
-|---|---|
-| 13–15 | RAG Systems (learn + build) |
-| 16–18 | AI Agents + Multi-Agent Systems |
-| 19 | Production AI (Streaming, Security, Cost) |
-| 20–23 | Capstone — AI Interview Coach |
-| 24 | Portfolio Finalization + Launch |
+| Total weeks | 24 |
+| Total tech sessions | 108 |
+| **LLD problems solved** | **8** (Parking Lot, Splitwise, BookMyShow, Chess, Cache LRU/LFU, Notification System, Tic-Tac-Toe, Logging Framework) |
+| **Design patterns mastered** | **9** (Strategy, Factory, Observer, Singleton, Builder, Decorator, Chain of Responsibility, State, Adapter) |
+| **HLD case studies** | **10** (URL Shortener, Rate Limiter, WhatsApp, Twitter Feed, Uber, YouTube/Netflix, Distributed Cache, Search Autocomplete, RAG-at-scale, ChatGPT) |
+| **Mock system design interviews** | **3** (LLD mock, HLD mock, AI System Design mock) |
+| **Deployed portfolio projects** | **6** (Async client, Full-stack app, AI Resume Reviewer, RAG Chatbot, Multi-Agent Assistant, AI Interview Coach capstone) |
 
 ---
 
-# PHASE 1 — FOUNDATIONS + ENGINEERING
+## Module Map
+
+### Phase 1 — Foundations + Engineering + System Design (Weeks 1–12)
+
+| Week | Module |
+|---|---|
+| 1 | Python OOP & Object-Oriented Programming |
+| 2 | Advanced Python & Async Programming |
+| 3 | Databases & Networking Foundations |
+| 4 | Async API Mini Project |
+| 5 | FastAPI Backend Development |
+| 6 | React Frontend Development |
+| 7 | Full-Stack Application (Deployed) |
+| **8** | **LLD — Foundations (SOLID + UML)** |
+| **9** | **LLD — Patterns & Problems** |
+| **10** | **HLD — Building Blocks** |
+| **11** | **HLD — System Design Cases** |
+| 12 | ML + Prompt Engineering + AI Mini Project |
+
+### Phase 2 — AI Engineering + Advanced System Design + Capstone (Weeks 13–24)
+
+| Week | Module |
+|---|---|
+| 13 | RAG Foundations |
+| 14 | RAG Retrieval Quality |
+| 15 | RAG Production & Shipping |
+| 16 | AI Agents Foundations |
+| 17 | LangGraph Orchestration |
+| 18 | Multi-Agent Systems |
+| **19** | **Advanced LLD for Interviews** |
+| **20** | **Advanced HLD — Real System Design** |
+| **21** | **HLD for AI Systems** |
+| 22 | Capstone — Planning & Backend |
+| 23 | Capstone — Frontend & Deployment |
+| 24 | Portfolio Finalization & Launch |
+
+---
+
+---
+
+# PHASE 1 — FOUNDATIONS + ENGINEERING + SYSTEM DESIGN
 
 ## Week 1 — Python OOP Foundation
 
@@ -60,25 +85,25 @@
 
 ---
 
-## Week 2 — Python Advanced (Decorators, Generators, Async)
+## Week 2 — Advanced Python & Async Programming
 
 | Day | Topic | 90 min Learn | 90 min Practice |
 |---|---|---|---|
-| 1 | Decorators | Function decorators, decorators with args, `functools.wraps` | Write `@timer`, `@retry`, `@cache` decorators |
-| 2 | Generators & Iterators | Generator functions, `yield`, iterators, generator expressions | Build a file line-reader generator + Fibonacci generator |
-| 3 | Context Managers + Type Hints | `with` statement, `__enter__`/`__exit__`, custom context managers, type hints | Write a `Timer` context manager + add type hints to all Week 1 code |
-| 4 | Async/Await | Event loop, coroutines, `async/await`, `asyncio.gather` | Build async function calling 3 APIs concurrently |
+| 1 | Decorators & functools | Function decorators, decorators with args, `functools.wraps` | Write `@timer`, `@retry`, `@cache` decorators |
+| 2 | Generators + Context Managers | `yield`, generators, iterators, `with` statement, custom context managers | Build a Timer context manager + file line-reader generator |
+| 3 | Type Hints + async/await | Type annotations, basic generics, async/await syntax, coroutines | Add type hints to Week 1 code + write first async function |
+| 4 | asyncio in Action | Event loop, `asyncio.gather`, concurrent execution, httpx basics | Build async function calling 3 APIs concurrently |
 
 ---
 
-## Week 3 — SQL + Networking
+## Week 3 — Databases & Networking
 
 | Day | Topic | 90 min Learn | 90 min Practice |
 |---|---|---|---|
-| 1 | SQL Basics | SELECT, WHERE, ORDER BY, LIMIT, INSERT/UPDATE/DELETE | 15 queries on a sample dataset (employees / orders) |
-| 2 | SQL Joins & Aggregations | INNER/LEFT/RIGHT JOIN, GROUP BY, HAVING, aggregate functions | 10 multi-table queries |
-| 3 | SQL Indexes + Transactions | Indexes (why & when), ACID, basic transactions | Add indexes to your sample DB; measure speed difference |
-| 4 | Networking Concepts | HTTP methods, status codes, REST principles, WebSockets vs HTTP, TLS basics | Use Postman: hit 5 public APIs (GET/POST/PUT/DELETE); document responses |
+| 1 | SQL Fundamentals | SELECT, WHERE, ORDER BY, INSERT/UPDATE/DELETE, basic Joins | 15 queries on a sample dataset (employees / orders) |
+| 2 | SQL Advanced | All Join types, GROUP BY, HAVING, aggregations, subqueries | 10 multi-table queries with aggregations |
+| 3 | Indexes + Transactions | Indexes (when & how), ACID, transactions, query optimization | Add indexes to sample DB; measure speed; write transaction example |
+| 4 | Networking Essentials | HTTP methods, status codes, REST principles, WebSockets vs HTTP, TLS | Use Postman: hit 5 public APIs; document responses |
 
 ---
 
@@ -88,36 +113,25 @@
 
 | Day | Topic | 90 min Learn | 90 min Practice |
 |---|---|---|---|
-| 1 | Project setup | Project structure, `uv` package manager, `aiohttp`/`httpx` basics | Set up repo with `uv init`, install deps, scaffold OOP structure |
-| 2 | Build async fetcher | Concurrent API calls with asyncio.gather, error handling | Implement async client class with 3 API integrations |
-| 3 | DB integration | SQLAlchemy basics, schema design | Add models + save fetched data to SQLite |
-| 4 | Polish & ship | Logging, README writing, git workflow | Push to GitHub with clean README + screenshots. **🏆 Portfolio Piece #1** |
+| 1 | Project setup | Structure, `uv` package manager, `pyproject.toml`, httpx | Set up repo with `uv init`, install deps, scaffold OOP structure |
+| 2 | Async fetcher | Concurrent API calls, error handling, retries | Implement async client class with 3 API integrations |
+| 3 | DB integration | SQLAlchemy basics, schema design, persistence | Add models + save fetched data to SQLite |
+| 4 | Polish & ship | Logging, README, git workflow | Push to GitHub with clean README. **🏆 Portfolio Piece #1** |
 
 ---
 
-## Week 5 — FastAPI Part 1
+## Week 5 — FastAPI Backend Development (Condensed)
 
 | Day | Topic | 90 min Learn | 90 min Practice |
 |---|---|---|---|
-| 1 | FastAPI Intro | Setup, routing, Pydantic models, automatic docs | Build basic CRUD API with in-memory store (5 endpoints) |
-| 2 | Request Handling | Path params, query params, request body, response models | Add validation + custom response models to your API |
-| 3 | SQLAlchemy Async | Async engine, sessions, models, `select()` | Set up Postgres locally (Docker), define models, write first async query |
-| 4 | CRUD with DB | Connect API to DB, async CRUD endpoints | Full CRUD endpoints backed by Postgres |
+| 1 | FastAPI + Pydantic | Setup, routing, Pydantic models, request/response validation, auto-docs | Build basic CRUD API with in-memory store (5 endpoints) |
+| 2 | DB Integration | SQLAlchemy 2.0 async, Postgres setup, async sessions, CRUD with DB | Full CRUD endpoints backed by Postgres in Docker |
+| 3 | Authentication | JWT, password hashing, dependency injection (`Depends`), current-user | Add login/register + protect routes with auth dependency |
+| 4 | Middleware + Docker | CORS, exception handlers, Docker basics for FastAPI | Add CORS + error handler; Dockerize your API |
 
 ---
 
-## Week 6 — FastAPI Part 2
-
-| Day | Topic | 90 min Learn | 90 min Practice |
-|---|---|---|---|
-| 1 | Authentication | JWT basics, password hashing, OAuth2 password flow | Add login/register endpoints with JWT |
-| 2 | Dependency Injection | FastAPI's DI system, `Depends`, current-user dependency | Protect routes with auth dependency; add user-scoped resources |
-| 3 | Middleware + Error Handling | Middleware (CORS, logging), exception handlers, validation errors | Add CORS middleware + custom exception handler |
-| 4 | Docker for FastAPI | Dockerfile, docker-compose with Postgres, env vars | Dockerize your full API + Postgres with docker-compose |
-
----
-
-## Week 7 — React + Tailwind
+## Week 6 — React + Tailwind
 
 | Day | Topic | 90 min Learn | 90 min Practice |
 |---|---|---|---|
@@ -128,85 +142,108 @@
 
 ---
 
-## Week 8 — Full-Stack Project
+## Week 7 — Full-Stack Project
 
-> **Goal:** Wire React + FastAPI from Weeks 5–7 into a real deployed app. Pick: URL shortener, notes app, or expense tracker.
+> **Goal:** Wire React + FastAPI from Weeks 5–6 into a real deployed app.
 
 | Day | Topic | 90 min Learn | 90 min Practice |
 |---|---|---|---|
-| 1 | Plan + scaffold | API contract design, folder structure | Create both repos; define endpoints; build initial UI shells |
-| 2 | Wire auth end-to-end | Token storage, protected routes (frontend), refresh patterns | Login + signup flow working end-to-end |
-| 3 | Core features + polish | CRUD on frontend, error handling, loading states | Implement core CRUD on UI + backend |
-| 4 | Deploy + document | Render.com (backend), Vercel (frontend), env vars, custom domain | Deploy live, write README with architecture, record 1-min demo. **🏆 Portfolio Piece #2** |
+| 1 | Plan + scaffold | API contract design, folder structure, CORS | Create both repos; define endpoints; build initial UI shells |
+| 2 | Auth end-to-end | Token storage, protected routes (frontend), refresh patterns | Login + signup flow working end-to-end |
+| 3 | Core features | CRUD on frontend, error handling, loading states | Implement core CRUD on UI + backend |
+| 4 | Deploy + document | Render.com (backend), Vercel (frontend), env vars | Deploy live, write README. **🏆 Portfolio Piece #2** |
 
 ---
 
-## Week 9 — LLD (Low Level Design)
+## 🎯 Week 8 — LLD Foundations (SOLID + UML)
+
+> **The placement-critical week #1.** Most freshers know SOLID by name but can't apply it. This week makes you actually apply it.
 
 | Day | Topic | 90 min Learn | 90 min Practice |
 |---|---|---|---|
-| 1 | SOLID Principles | All 5 principles with Python examples | Refactor your Week 4 project to follow SOLID; document changes |
-| 2 | Strategy + Factory | Strategy pattern, simple factory, factory method | Implement Strategy for payment methods + Factory for vehicles |
-| 3 | Observer + Singleton + Builder | When to use each, Python implementations | Implement event-based notification system using Observer |
-| 4 | LLD Problem Solving | Approach: requirements → classes → interactions → code | Solve Parking Lot (or Splitwise) in Python with class diagrams |
+| 1 | SRP + OCP | Single Responsibility & Open/Closed Principles with Python examples | Refactor Week 4 project — find SRP violations, fix them |
+| 2 | LSP + ISP + DIP | Liskov Substitution, Interface Segregation, Dependency Inversion | Spot LSP violations in inheritance trees; design ISP-compliant interfaces |
+| 3 | UML Diagrams | Class diagrams (attributes, methods, relationships), sequence diagrams | Draw UML class diagrams for Week 4 + Week 7 projects |
+| 4 | Code Smells + Refactoring | Identifying duplicate code, long methods, large classes, feature envy | Take a deliberately bad code sample, identify 5 smells, refactor it |
 
 ---
 
-## Week 10 — HLD (High Level Design)
+## 🎯 Week 9 — LLD Patterns & Problems
+
+> **The placement-critical week #2.** Solve 4 classic LLD problems used in Indian product company interviews.
 
 | Day | Topic | 90 min Learn | 90 min Practice |
 |---|---|---|---|
-| 1 | Scalability Basics | Vertical vs horizontal, load balancers, CAP theorem | Sketch architecture for "design Instagram feed" on paper |
-| 2 | Caching + CDN | Redis basics, cache strategies (write-through, cache-aside), CDN | Add Redis caching to one endpoint in your Week 8 project |
-| 3 | Queues + Sharding | Message queues (Kafka/RabbitMQ conceptual), sharding, replication, read replicas | Sketch architecture for "design a notification system" |
-| 4 | System Design Case Study | Walkthrough: design URL shortener (you built it!) | Solve: design a rate limiter, with class + sequence diagrams |
+| 1 | Strategy + Factory + Decorator | Strategy for swappable algorithms, Factory variants, Decorator for behavior extension | Implement Strategy for payment methods + Factory for vehicles + Decorator for logging |
+| 2 | Observer + Singleton + Builder | Observer for events, Singleton (with cautions), Builder for complex objects | Build event-based notification system using Observer; Builder for complex query |
+| 3 | LLD Problem Pair 1 | Approach: requirements → entities → classes → interactions → code | Solve: **Parking Lot system** + **Splitwise** in Python (with UML diagrams) |
+| 4 | LLD Problem Pair 2 | Same approach, harder problems | Solve: **BookMyShow** (movie booking) + **Chess game design** |
 
 ---
 
-## Week 11 — ML Conceptual (Light, Goal: Build Intuition)
+## 🎯 Week 10 — HLD Building Blocks
+
+> **The placement-critical week #3.** Without these building blocks, every HLD interview is just guessing.
 
 | Day | Topic | 90 min Learn | 90 min Practice |
 |---|---|---|---|
-| 1 | What is ML? | ML vs traditional programming, supervised/unsupervised, train/val/test split | Watch Andrew Ng ML Week 1; take notes |
-| 2 | Regression + Classification | Linear regression, logistic regression, cost functions intuition | Train a linear regression model on a toy dataset with scikit-learn |
-| 3 | Trees + Ensembles | Decision trees, random forests, XGBoost overview | Train a Random Forest classifier on Titanic dataset |
-| 4 | Neural Net Intuition + Embeddings | What's a neural net, backprop intuition, what are embeddings | Read about word embeddings; play with sentence-transformers in Colab |
+| 1 | Scalability + Load Balancers | CAP theorem, vertical vs horizontal, L4 vs L7 load balancers, algorithms | Sketch how to scale a single-server app to handle 1M users |
+| 2 | Caching + CDN | Cache-aside, write-through, write-back patterns, Redis usage, CDN basics | Add Redis caching to a Week 7 endpoint; measure speedup |
+| 3 | Message Queues | Kafka vs RabbitMQ, when to use each, pub/sub model | Sketch architecture for a notification system using a queue |
+| 4 | Sharding + Microservices | Database sharding strategies, replication (master-slave), microservices vs monolith trade-offs | Sketch when to split a monolith into microservices |
 
 ---
 
-## Week 12 — Prompt Engineering + AI Mini Project
+## 🎯 Week 11 — HLD System Design Cases
+
+> **The placement-critical week #4.** Solve real interview cases. By end of week, students can attempt any standard HLD question.
 
 | Day | Topic | 90 min Learn | 90 min Practice |
 |---|---|---|---|
-| 1 | LLM API Basics | System/user/assistant messages, temperature, max tokens, API calling (Claude/OpenAI) | Make 10 API calls to an LLM; experiment with temperature and system prompts |
-| 2 | Prompt Patterns | Few-shot, chain-of-thought, structured output (JSON mode) | Build prompts that return strictly typed JSON for 3 use cases |
-| 3 | Prompt Chaining + Context Mgmt | Multi-step prompts, context window limits, token counting | Build a 3-step prompt chain (extract → classify → summarize) |
-| 4 | Build: AI Resume Reviewer | Apply everything: FastAPI backend + LLM call + simple React UI | Ship a deployed AI resume reviewer. **🏆 Portfolio Piece #3** |
+| 1 | API Gateway + Rate Limiting + HA | Gateway responsibilities, rate limiting strategies (token bucket, sliding window), high availability patterns | Design a rate limiter on paper + write pseudocode |
+| 2 | Case Studies Pair 1 | Walk through: **URL Shortener** (TinyURL), **Rate Limiter** design | Solve from scratch on whiteboard, time-boxed 45 min each |
+| 3 | Case Studies Pair 2 | Walk through: **WhatsApp messaging**, **Twitter feed** | Solve from scratch, focus on data model + architecture |
+| 4 | Case Study + Mock | Walk through: **Uber ride-matching** + Mock system design interview practice | Pair up + take turns being interviewer/candidate (45 min each) |
+
+---
+
+## Week 12 — ML + Prompt Engineering + AI Mini Project
+
+> **Combined module:** Light ML conceptual + practical prompt engineering. ML is intuition-only; prompt engineering is where you actually build.
+
+| Day | Topic | 90 min Learn | 90 min Practice |
+|---|---|---|---|
+| 1 | ML Fundamentals | Supervised/unsupervised, train/val/test split, regression vs classification intuition | Watch Andrew Ng ML Week 1; train a simple linear regression with scikit-learn |
+| 2 | NN Intuition + Embeddings | Neural networks intuition (3Blue1Brown), embeddings concept | Train a Random Forest classifier; explore sentence-transformers in Colab |
+| 3 | Prompt Engineering Basics | LLM message format, temperature, few-shot, Chain-of-Thought, structured output (JSON) | Make 10 API calls; build prompt for structured JSON output |
+| 4 | Build AI Mini Project | Prompt chaining + context management + integration patterns | Ship a deployed AI Resume Reviewer (FastAPI + simple React UI). **🏆 Portfolio Piece #3** |
 
 ---
 
 ## ✅ End of Phase 1 — What You'll Have
 
 **Skills:**
-- Strong Python (OOP + async + standard library)
+- Strong Python (OOP + async)
 - SQL fluency + networking conceptual base
 - FastAPI + React intermediate full-stack
-- LLD + HLD interview-ready (intermediate)
-- ML conceptual base
-- Prompt engineering fundamentals
+- **LLD: SOLID applied + 6 patterns + 4 classic problems solved**
+- **HLD: Building blocks + 5 case studies + 1 mock interview**
+- ML conceptual base + Prompt engineering fundamentals
 
 **Portfolio (3 deployed projects):**
 1. Async API Client (Week 4)
-2. Full-Stack Web App (Week 8)
+2. Full-Stack Web App (Week 7)
 3. AI Resume Reviewer (Week 12)
 
----
+**Placement Readiness:** Students can attempt any standard LLD problem + 70% of standard HLD cases.
 
 ---
 
-# PHASE 2 — AI ENGINEERING + CAPSTONE
+---
 
-> **Pattern change:** Phase 2 adds a dedicated **Project Build Day** each week (Day 5). The 4 tech days teach concepts; the project day applies them to a real shipping project that compounds week over week.
+# PHASE 2 — AI ENGINEERING + ADVANCED SYSTEM DESIGN + CAPSTONE
+
+> **Pattern:** 4 tech days + 1 dedicated Project Build day per week.
 
 ---
 
@@ -214,59 +251,59 @@
 
 | Day | Topic | 90 min Learn | 90 min Practice |
 |---|---|---|---|
-| 1 | What is RAG | When to use RAG vs fine-tuning, the full RAG pipeline | Read DeepLearning.AI RAG module 1; sketch a RAG architecture |
-| 2 | Document Parsing | Loading PDFs, websites, markdown with LangChain loaders | Parse 10 PDFs into clean text chunks |
-| 3 | Chunking Strategies | Fixed-size, recursive, semantic chunking, overlap tuning | Compare 3 chunking strategies on same document; measure retrieval quality |
-| 4 | Embeddings | Embeddings basics, OpenAI / BGE / Cohere models, similarity | Generate embeddings for your chunks; explore in 2D with t-SNE |
-| **5 (Project)** | **RAG MVP** | — | **Build:** Bare-bones RAG over your own notes (ChromaDB + OpenAI/Claude). Single-file Python script. Working end-to-end |
+| 1 | What is RAG | RAG vs Fine-tuning, full RAG pipeline, document parsing (PDFs, websites) | Sketch a RAG architecture; parse 10 PDFs into clean text |
+| 2 | Chunking | Fixed, recursive, semantic chunking, overlap tuning | Compare 3 chunking strategies on same document |
+| 3 | Embeddings | OpenAI / BGE embeddings, similarity, distance metrics (cosine, dot product) | Generate embeddings for chunks; visualize in 2D |
+| 4 | Vector DBs + ChromaDB | ChromaDB setup, collections, persistence basics | Set up ChromaDB; ingest your chunks; run similarity search |
+| **5 (Project)** | **RAG MVP** | — | **Build:** Bare-bones RAG over your own notes. Single-file Python script. Working end-to-end |
 
 ---
 
-## Week 14 — RAG: Retrieval Quality
+## Week 14 — RAG Retrieval Quality
 
 | Day | Topic | 90 min Learn | 90 min Practice |
 |---|---|---|---|
-| 1 | Vector Databases | ChromaDB deep dive: collections, metadata filtering, persistence | Migrate Week 13 MVP to persistent ChromaDB; add metadata |
-| 2 | Hybrid Search | BM25 + semantic search combined, reciprocal rank fusion | Implement hybrid search; compare to pure semantic on 10 queries |
-| 3 | Re-ranking | Cross-encoder rerankers (cohere, bge-reranker), when to use | Add re-ranker to your pipeline; measure quality improvement |
-| 4 | Query Transformation | HyDE, multi-query, query decomposition | Implement multi-query retrieval; test on complex questions |
-| **5 (Project)** | **RAG with FastAPI** | — | **Build:** Wrap your RAG in a FastAPI endpoint. POST `/ask`, returns answer + sources. Deploy to Render |
+| 1 | ChromaDB Deep Dive | Collections, metadata filtering, persistence, advanced queries | Migrate Week 13 MVP to persistent ChromaDB; add metadata filters |
+| 2 | Hybrid Search | BM25 + semantic combined, reciprocal rank fusion | Implement hybrid search; compare to pure semantic on 10 queries |
+| 3 | Re-ranking | Cross-encoder rerankers (Cohere, bge-reranker), when to use | Add re-ranker to your pipeline; measure quality improvement |
+| 4 | Citations + Evaluation | Source citations, RAGAs framework, faithfulness, context precision | Add citation rendering; evaluate RAG on 20 test questions |
+| **5 (Project)** | **RAG + FastAPI** | — | **Build:** Wrap RAG in FastAPI endpoint. POST `/ask`, returns answer + sources. Deploy |
 
 ---
 
-## Week 15 — RAG: Production
+## Week 15 — RAG Production & Shipping
 
 | Day | Topic | 90 min Learn | 90 min Practice |
 |---|---|---|---|
-| 1 | Source Citations | Returning sources, page numbers, confidence scores | Add citation rendering to API response |
-| 2 | Evaluation: RAGAs | Faithfulness, context precision, answer relevancy | Set up RAGAs; evaluate your RAG on 20 test questions |
-| 3 | Cloud Vector DBs | Pinecone setup, when to move off ChromaDB | Migrate one collection to Pinecone; compare latency |
-| 4 | RAG Patterns | Agentic RAG, parent-document retrieval, hierarchical | Pick one advanced pattern; integrate into your project |
-| **5 (Project)** | **Ship RAG Chatbot** | — | **Build:** Full React UI for your RAG. Streaming responses. Deploy. Write blog post. **🏆 Portfolio Piece #4** |
+| 1 | Streaming | Server-Sent Events (SSE) with FastAPI's `StreamingResponse` | Add streaming to your RAG endpoint; verify token-by-token |
+| 2 | Security | Prompt injection (direct/indirect), defensive prompts, PII filtering basics | Test prompt injection attacks; add guards |
+| 3 | Cost + Tokens | Token counting, cost-per-request, model routing | Add cost tracking; route easy queries to cheap models |
+| 4 | Observability | LangSmith or Helicone setup, tracing, debugging | Wire LangSmith into your RAG; track 100 requests |
+| **5 (Project)** | **Ship RAG Chatbot** | — | **Build:** Full React UI for your RAG. Streaming responses. Deployed. **🏆 Portfolio Piece #4** |
 
 ---
 
-## Week 16 — AI Agents: Foundations
+## Week 16 — AI Agents Foundations
 
 | Day | Topic | 90 min Learn | 90 min Practice |
 |---|---|---|---|
-| 1 | What is an Agent | Agents vs RAG vs simple LLM calls, when to use each | Read Anthropic's "Building effective agents" article; take notes |
-| 2 | Tool Use / Function Calling | LLM function calling, structured outputs, tool schemas | Build a single-tool agent: calculator that LLM can call |
+| 1 | What is an Agent | Agents vs RAG vs LLM calls, when to use each | Read Anthropic's "Building effective agents"; take notes |
+| 2 | Tool Use | LLM function calling, tool schemas, structured outputs | Build a single-tool agent: calculator that LLM can call |
 | 3 | ReAct Loop | Reasoning + Acting pattern, observation-thought-action cycle | Trace through 3 ReAct examples on paper before coding |
 | 4 | Build ReAct from Scratch | Hand-rolled ReAct loop (no framework yet) | Build a from-scratch ReAct agent with 3 tools: search, calculator, time |
 | **5 (Project)** | **Tool-Calling Demo** | — | **Build:** A "personal assistant" agent with 5 tools (weather, web search, calculator, calendar mock, notes). Local CLI |
 
 ---
 
-## Week 17 — LangGraph
+## Week 17 — LangGraph Orchestration
 
 | Day | Topic | 90 min Learn | 90 min Practice |
 |---|---|---|---|
 | 1 | LangGraph Basics | State, nodes, edges, the StateGraph | Rebuild Week 16 ReAct agent in LangGraph; compare code |
 | 2 | Conditional Edges + Cycles | Branching logic, loops, when to terminate | Build a 3-node graph with conditional routing |
 | 3 | Tools in LangGraph | ToolNode, tool integration, error handling | Add 5 tools to your graph with proper error handling |
-| 4 | Memory + Persistence | Checkpointing, conversation memory, thread management | Add persistent memory; agent remembers across runs |
-| **5 (Project)** | **Stateful Agent** | — | **Build:** A research assistant that remembers prior conversations. FastAPI endpoint. Test with 5-turn conversation |
+| 4 | Memory + RAG Integration | Checkpointing, conversation memory, giving agents access to RAG | Add persistent memory + connect Week 15 RAG as a tool |
+| **5 (Project)** | **Stateful Research Agent** | — | **Build:** A research assistant that remembers prior conversations + uses your RAG. FastAPI endpoint |
 
 ---
 
@@ -274,85 +311,91 @@
 
 | Day | Topic | 90 min Learn | 90 min Practice |
 |---|---|---|---|
-| 1 | Multi-Agent Patterns | Supervisor, hierarchical, network patterns; when to use multi-agent | Sketch architecture for a multi-agent customer support system |
-| 2 | Supervisor Pattern | Build supervisor that routes to specialist agents | Implement supervisor + 2 specialists in LangGraph |
-| 3 | Agent + RAG Integration | Giving agents access to your RAG as a tool | Combine Week 15 RAG and Week 17 agent — agent uses RAG to answer questions |
-| 4 | MCP Basics | Model Context Protocol, why it matters, basic server | Read MCP spec; explore one open-source MCP server |
-| **5 (Project)** | **Multi-Agent Research Assistant** | — | **Build:** Researcher (RAG) + Analyst (reasoning) + Writer (output) multi-agent system. Deployed with React UI. **🏆 Portfolio Piece #5** |
+| 1 | Multi-Agent Patterns | Supervisor pattern, when multi-agent beats single-agent | Sketch architecture for a multi-agent customer support system |
+| 2 | Supervisor + Specialists | Build a supervisor that routes to specialist agents | Implement supervisor + 2 specialists in LangGraph |
+| 3 | Inter-Agent State Passing | How agents share state, message protocols | Build a 3-agent pipeline passing state between them |
+| 4 | Debugging + Use Cases | Common failure modes, real-world multi-agent applications | Inject deliberate bugs into your multi-agent system; debug them |
+| **5 (Project)** | **Multi-Agent Research Assistant** | — | **Build:** Researcher (RAG) + Analyst (reasoning) + Writer (output) multi-agent system. Deployed. **🏆 Portfolio Piece #5** |
 
 ---
 
-## Week 19 — Production AI
+## 🎯 Week 19 — Advanced LLD for Interviews
+
+> **The placement-critical week #5.** Goes beyond basic patterns into the LLD problems that separate good candidates from great ones.
 
 | Day | Topic | 90 min Learn | 90 min Practice |
 |---|---|---|---|
-| 1 | Streaming Responses | SSE (Server-Sent Events) with FastAPI's `StreamingResponse` | Add streaming to one existing project's chat endpoint |
-| 2 | WebSocket Streaming | When to use WebSockets vs SSE, bidirectional streams | Build a WebSocket chat with token-by-token streaming |
-| 3 | Security: Prompt Injection + PII | Direct/indirect prompt injection, defensive prompts, PII filtering (Presidio) | Test prompt injection attacks on your projects; add guards |
-| 4 | Cost + Observability | Token tracking, model routing, LangSmith/Helicone setup | Wire LangSmith into your RAG chatbot; track 100 requests |
-| **5 (Project)** | **Production Retrofit** | — | **Build:** Add streaming + guards + cost monitoring to Portfolio Pieces #4 and #5. Document changes in READMEs |
+| 1 | Chain of Responsibility + State | Two patterns frequently asked in senior interviews | Implement CoR for request validation; State for order workflow |
+| 2 | Adapter + Facade | Integration patterns essential for system design | Build Adapter for legacy API; Facade for complex subsystem |
+| 3 | LLD Problem Pair 1 | Same approach as Week 9 but harder | Solve: **LRU/LFU Cache** + **Notification System** |
+| 4 | LLD Problem Pair 2 | More complex multi-class interactions | Solve: **Tic-Tac-Toe / Snake & Ladder** + **Logging Framework** |
+| **5 (Project)** | **Mock LLD Interview** | — | **Practice:** Live mock LLD interview (60 min) with another student or instructor — design + code |
 
 ---
 
-## Week 20 — Capstone: Planning + Backend Foundation
+## 🎯 Week 20 — Advanced HLD — Real System Design
 
-> **Project: AI Interview Coach** — A multi-agent system that conducts mock technical interviews, evaluates answers, and provides personalized coaching.
+> **The placement-critical week #6.** Real interview HLD questions, with the advanced concepts that come up in product company interviews.
 
 | Day | Topic | 90 min Learn | 90 min Practice |
 |---|---|---|---|
-| 1 | Capstone Planning | Requirements gathering, user flows, architecture diagrams | Write 1-page PRD; draw system architecture; create GitHub repo |
-| 2 | Database + Auth | User accounts, interview sessions schema, auth flow | Set up FastAPI + Postgres + JWT auth (reuse Week 6 patterns) |
-| 3 | RAG: Question Bank | Building a RAG over 1000+ interview questions across topics | Ingest curated question bank (DSA + System Design + Behavioral) |
-| 4 | Interviewer Agent | First agent: picks questions, asks them, manages flow | Build the Interviewer agent with LangGraph |
-| **5 (Project)** | **Major Build Day** | — | **Build:** Wire auth + question bank + interviewer agent end-to-end. CLI demo working |
+| 1 | Database Design at Scale | SQL vs NoSQL trade-offs, when to use each, data modeling for scale | Design data layer for "design Instagram" — choose DBs with justification |
+| 2 | Consistent Hashing + Bloom Filters | How distributed systems route + check existence efficiently | Implement consistent hashing in Python; build a Bloom filter |
+| 3 | Event-Driven Architecture | Event sourcing, CQRS, when to use, trade-offs | Sketch an event-driven order processing system |
+| 4 | Case Studies | Walk through: **YouTube/Netflix** + **Distributed Cache** + **Search Autocomplete** | Solve from scratch on whiteboard, 30 min each |
+| **5 (Project)** | **Mock HLD Interview** | — | **Practice:** Live mock HLD interview (60 min) — full whiteboard system design |
 
 ---
 
-## Week 21 — Capstone: Agent Architecture
+## 🎯 Week 21 — HLD for AI Systems (The Hidden Weapon)
+
+> **The placement-critical week #7.** AI companies are now asking "design ChatGPT" and "design a RAG system" in interviews. This module gives you the answer.
 
 | Day | Topic | 90 min Learn | 90 min Practice |
 |---|---|---|---|
-| 1 | Evaluator Agent | LLM-as-judge patterns, rubric-based evaluation | Build Evaluator agent that scores answers on 5 dimensions |
-| 2 | Coach Agent | Personalized feedback generation, weakness identification | Build Coach agent that uses Evaluator output |
-| 3 | Multi-Agent Orchestration | Supervisor orchestrating Interviewer → Evaluator → Coach | Wire all 3 agents into one LangGraph |
-| 4 | Memory + Progress Tracking | Per-user progress, topics covered, weakness trends | Add persistent memory; track user across sessions |
-| **5 (Project)** | **Major Build Day** | — | **Build:** Multi-agent system fully operational. Run 3 full mock interviews end-to-end |
+| 1 | Designing a RAG System at Scale | Ingestion pipeline, vector DB sharding, retrieval optimization, caching | Sketch architecture for RAG serving 1M queries/day |
+| 2 | Designing ChatGPT Architecture | LLM serving, request routing, session management, streaming | Walk through full ChatGPT architecture, identify all bottlenecks |
+| 3 | Designing a Recommendation System | Candidate generation, ranking, personalization, real-time updates | Design YouTube's recommendation pipeline |
+| 4 | LLM Inference at Scale | Caching, batching, model routing (cheap → expensive), token streaming | Calculate cost vs latency trade-offs for a RAG system |
+| **5 (Project)** | **Mock AI System Design Interview** | — | **Practice:** Live mock AI system design interview — design from scratch in 60 min |
 
 ---
 
-## Week 22 — Capstone: Frontend + UX
+## Week 22 — Capstone — Planning & Backend
+
+> **Project: AI Interview Coach** — Multi-agent system that conducts mock interviews, evaluates answers, and provides coaching.
 
 | Day | Topic | 90 min Learn | 90 min Practice |
 |---|---|---|---|
-| 1 | React UI Setup | Vite + React + Tailwind, design system, component library | Build login + dashboard shell |
-| 2 | Interview Interface | Real-time interview UI, question display, answer input | Build the interview screen with streaming responses |
-| 3 | Feedback + Coaching Display | Render evaluator scores + coach feedback nicely | Build the post-interview review screen |
-| 4 | Dashboard + Progress | User dashboard showing history, strengths, gaps | Build dashboard with charts (recharts) |
-| **5 (Project)** | **Major Build Day** | — | **Build:** Full frontend wired to backend. End-to-end demo recordable |
+| 1 | Capstone Planning | PRD writing, architecture diagrams, user flows | Write 1-page PRD; draw system architecture; create GitHub repo |
+| 2 | Database + Auth Setup | Schema design, user accounts, interview sessions | Set up FastAPI + Postgres + JWT auth |
+| 3 | RAG: Question Bank | Ingesting interview questions across DSA + System Design + Behavioral | Ingest curated question bank into ChromaDB |
+| 4 | Interviewer + Evaluator Agents | Build the first two agents using LangGraph | Build Interviewer (asks questions) + Evaluator (scores answers) |
+| **5 (Project)** | **Backend Wired** | — | **Build:** Auth + question bank + interviewer + evaluator working end-to-end via CLI |
 
 ---
 
-## Week 23 — Capstone: Production + Polish
+## Week 23 — Capstone — Frontend & Deployment
 
 | Day | Topic | 90 min Learn | 90 min Practice |
 |---|---|---|---|
-| 1 | Production Deployment | Docker, Render (backend), Vercel (frontend), env vars | Deploy capstone to production URLs |
-| 2 | Cost Monitoring Dashboard | Token tracking per user, cost-per-session, model routing | Build admin dashboard showing usage + costs |
-| 3 | Security Hardening | Prompt injection defenses, PII handling, rate limiting | Run security audit; fix any vulnerabilities |
-| 4 | Performance | Caching responses, model routing (cheap → expensive), latency | Optimize: target sub-3-sec first-token latency |
-| **5 (Project)** | **Major Build Day** | — | **Build:** Production-grade capstone deployed and stress-tested |
+| 1 | React UI Setup | Vite + React + Tailwind, design system | Build login + dashboard shell |
+| 2 | Interview Interface | Real-time interview UI with streaming responses | Build the interview screen with streaming |
+| 3 | Feedback + Dashboard | Render evaluator scores, coach feedback, progress charts | Build post-interview review + user dashboard with recharts |
+| 4 | Production Deployment | Docker, Render (backend), Vercel (frontend), env vars, monitoring | Deploy to production URLs; test end-to-end |
+| **5 (Project)** | **Capstone Ship** | — | **Build:** Production-grade capstone deployed and demoable. **🏆 Portfolio Piece #6 — Capstone** |
 
 ---
 
-## Week 24 — Portfolio Finalization + Launch
+## Week 24 — Portfolio Finalization & Launch
 
 | Day | Topic | 90 min Learn | 90 min Practice |
 |---|---|---|---|
-| 1 | README Mastery | Architecture diagrams, demo GIFs, clear setup instructions | Polish READMEs for all 5 portfolio projects |
-| 2 | Demo Videos | 60-second product demos, Loom/Riverside basics | Record 1-min demo videos for all 5 projects |
-| 3 | GitHub Profile | Profile README, pinned repos, contribution graph optimization | Polish GitHub profile; pin 5 best projects |
+| 1 | README Mastery | Architecture diagrams, demo GIFs, clear setup instructions | Polish READMEs for all 6 portfolio projects |
+| 2 | Demo Videos | 60-second product demos, Loom/Riverside basics | Record 1-min demo videos for all 6 projects |
+| 3 | GitHub Profile | Profile README, pinned repos, contribution graph | Polish GitHub profile; pin top 6 projects |
 | 4 | LinkedIn + Portfolio Site | LinkedIn rewrite for AI engineer roles, simple portfolio site | Update LinkedIn; deploy a simple portfolio site (Vercel) |
-| **5 (Project)** | **Capstone Launch** | — | **Build:** Public launch — LinkedIn post, X/Twitter thread, share in AI communities. **🏆 Portfolio Piece #6 — Capstone** |
+| **5 (Project)** | **Public Launch** | — | **Build:** LinkedIn post, X/Twitter thread, share in AI communities. Capstone goes public |
 
 ---
 
@@ -361,39 +404,67 @@
 **Skills:**
 - Production RAG systems (chunking, hybrid search, re-ranking, evaluation)
 - AI agents from scratch + LangGraph orchestration
-- Multi-agent systems with real coordination
+- Multi-agent systems
 - Streaming, security, cost optimization
-- Full capstone deployed and shippable
+- **Advanced LLD: 9 patterns, 8 problems solved**
+- **Advanced HLD: 10 case studies, 3 mock interviews including AI system design**
+- Full deployed capstone
 
-**Portfolio (3 new deployed AI projects + 1 capstone):**
-4. **RAG Chatbot** (Week 15) — RAG over personal docs with citations
-5. **Multi-Agent Research Assistant** (Week 18) — Researcher + Analyst + Writer
-6. **Capstone: AI Interview Coach** (Week 24) — Full production multi-agent system
-
-**By end of Week 24, total portfolio:** 6 deployed projects across the full stack — from async clients to production multi-agent systems.
+**Portfolio (3 new + capstone, total 6):**
+4. **RAG Chatbot** (Week 15)
+5. **Multi-Agent Research Assistant** (Week 18)
+6. **AI Interview Coach Capstone** (Week 23)
 
 ---
 
-## Phase 2 Project Day Philosophy
+## Why This v2 Curriculum Wins Placements
 
-Every Phase 2 project day directly applies what was just learned. This compounds:
+The single biggest change from v1 to v2 is **system design depth**. Here's the math on why this matters:
 
-- Week 13 RAG MVP → Week 14 adds production → Week 15 adds UI → **Portfolio Piece #4**
-- Week 16 tool agent → Week 17 LangGraph version → Week 18 multi-agent → **Portfolio Piece #5**
-- Weeks 20-24 capstone builds incrementally → **Portfolio Piece #6**
+| | Typical Course | This Course (v2) |
+|---|---|---|
+| LLD sessions | 4 | **20** (Weeks 8-9 + 19) |
+| HLD sessions | 4 | **15** (Weeks 10-11 + 20-21) |
+| LLD problems solved | 1-2 | **8** |
+| HLD case studies | 2-3 | **10** |
+| Mock system design interviews | 0 | **3** |
 
-No "throwaway practice" — every line of code goes toward shippable work.
+**Interview reality:**
+- Service companies test mostly DSA → ₹4-8 LPA range
+- Product companies test DSA + LLD → ₹8-15 LPA range
+- Top product companies + AI startups test DSA + LLD + HLD → **₹15-25+ LPA range**
+
+Your students will be ready for the third tier — not just AI roles, but any product company AI/backend role.
 
 ---
 
 ## Master Rules for Both Phases
 
-1. **Ship rough, ship fast.** A working ugly project beats a beautiful unfinished one. Always.
+1. **Ship rough, ship fast.** A working ugly project beats a beautiful unfinished one.
 2. **One topic at a time.** No tutorial hopping. Finish the day's learn → do the day's practice → close everything → next day.
-3. **Stuck protocol:** Isolate the specific concept that's blocking → 30 min of focused search/read on JUST that concept → unblock → continue. Don't open a new course.
-4. **Weekend reflection (5 min, Saturday):** Check off the week. Note what slipped. Plan adjustments for next week.
-5. **Public is better than private.** GitHub from Week 1. Blog from Week 4. LinkedIn from Week 12.
+3. **System design = whiteboard or paper FIRST.** Don't code until you've drawn the design.
+4. **Stuck protocol:** Isolate the specific concept that's blocking → 30 min of focused search/read → unblock → continue.
+5. **Weekend reflection (5 min, Saturday):** Check off the week. Note what slipped. Plan adjustments for next week.
+6. **Public is better than private.** GitHub from Week 1. Blog from Week 4. LinkedIn from Week 12.
 
 ---
 
-*End of complete 24-week tech stack syllabus. DSA and placement preparation are handled separately on Day 5 and Day 6 of each week per your own pacing.*
+## Honest Trade-offs in v2
+
+**What got compressed:**
+- FastAPI from 2 weeks → 1 week (cut OAuth flows, Alembic, docker-compose deep)
+- React kept at 1 week (no Redux, no advanced patterns)
+- Capstone from 4 weeks → 2 weeks (still buildable, less polish time)
+
+**What got expanded:**
+- LLD from 4 sessions → 20 sessions (+16)
+- HLD from 4 sessions → 15 sessions (+11)
+- AI System Design — entirely new, didn't exist in v1
+
+**Net effect:** Students might have a slightly less polished capstone, but they'll have **5x stronger system design fundamentals** — which is the single biggest predictor of offer level in placements.
+
+This is the right trade for a placement-focused B.Tech 3rd-year audience.
+
+---
+
+*End of 24-week consolidated syllabus v2. DSA and other placement preparation are handled separately per the student's own pacing.*
