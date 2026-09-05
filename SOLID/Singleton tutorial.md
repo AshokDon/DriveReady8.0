@@ -1168,4 +1168,5 @@ are live at once — the exact failure Singleton was built to prevent.
 
 ---
 
-*Post-read · Design Patterns 01 of 10 · Next class: Builder*
+[Uploading singleton-tutorial.html…]()
+
