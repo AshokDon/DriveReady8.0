@@ -2,9 +2,6 @@
 
 ## Tutorial 02 --- Classes, Objects, Constructors, References & Encapsulation
 
-> Source: HackMD Lecture 2\
-> https://hackmd.io/@7ZhgEFzKSUeDhAQFDVj8mw/Byizj2MzMe
-
 ------------------------------------------------------------------------
 
 ## 1. Abstraction: Principle vs Java Keyword
