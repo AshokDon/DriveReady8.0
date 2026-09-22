@@ -2,9 +2,6 @@
 
 ## Tutorial 01 --- Introduction to LLD, OOP Thinking & Entities
 
-> Source: HackMD Lecture 1\
-> https://hackmd.io/@7ZhgEFzKSUeDhAQFDVj8mw/HyaEU1JMMg
-
 ------------------------------------------------------------------------
 
 ## 1. What Is Low-Level Design?
