@@ -2,9 +2,6 @@
 
 ## Tutorial 04 --- Polymorphism, Abstract Classes, Interfaces & Composition
 
-> Source: HackMD Lecture 4\
-> https://hackmd.io/@7ZhgEFzKSUeDhAQFDVj8mw/Bk0Qmcqzfl
-
 ------------------------------------------------------------------------
 
 # 1. Polymorphism
