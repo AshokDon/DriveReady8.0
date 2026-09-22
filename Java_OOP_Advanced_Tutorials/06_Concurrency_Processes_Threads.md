@@ -1,10 +1,6 @@
 # Java OOP & Advanced Concepts
 
 ## Tutorial 06 --- Concurrency-1: Processes, Threads, Scheduling & Runnable
-
-> Source: HackMD Concurrency-1\
-> https://hackmd.io/@7ZhgEFzKSUeDhAQFDVj8mw/SySgeSZmzg
-
 ------------------------------------------------------------------------
 
 # 1. Program vs Process
