@@ -2,9 +2,6 @@
 
 ## Tutorial 07 --- Concurrency-2: Executors, Thread Pools, Callable & Future
 
-> Source: HackMD Concurrency-2\
-> https://hackmd.io/@7ZhgEFzKSUeDhAQFDVj8mw/r1WMg1SXGe
-
 ------------------------------------------------------------------------
 
 # 1. Why Thread Pools?
