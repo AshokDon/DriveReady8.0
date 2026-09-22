@@ -2,9 +2,6 @@
 
 ## Tutorial 05 --- OOP Lab: Library Management System
 
-> Source: HackMD OOP-4 Lab\
-> https://hackmd.io/@7ZhgEFzKSUeDhAQFDVj8mw/rJgHH0GpMze
-
 ------------------------------------------------------------------------
 
 # 1. Goal
