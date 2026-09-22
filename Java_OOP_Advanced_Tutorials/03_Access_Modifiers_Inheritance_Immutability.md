@@ -2,9 +2,6 @@
 
 ## Tutorial 03 --- Access Modifiers, `final`, Immutability, Copying & Inheritance
 
-> Source: HackMD Lecture 3\
-> https://hackmd.io/@7ZhgEFzKSUeDhAQFDVj8mw/ryg_vFyOzGe
-
 ------------------------------------------------------------------------
 
 # 1. Access Modifiers
